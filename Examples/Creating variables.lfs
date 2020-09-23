@@ -1,0 +1,4 @@
+// creating a string variable, integer variable and performing math
+var name = "Simon"
+var number = 20
+var doingMath = math number*2

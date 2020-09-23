@@ -1,0 +1,4 @@
+// use the keyword input followed by a statement to print
+var name = input "What is your name? "
+
+print string name

@@ -1,0 +1,6 @@
+var name = "Simon"
+var number = 20
+
+// use the keyword "string" to get the value from a string variable and the keyword "math" to get the value from a integer/float variable
+print string name
+print math number
