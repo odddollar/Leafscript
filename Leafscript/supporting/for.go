@@ -26,9 +26,18 @@ func forLoop(lines [][]string, iterVar string, iter string) {
 	// get position of iteration variable in variable array
 	pos := getVariablePosition(iterVar)
 
+	var lastValue int
+
 	// main for loop
 	for x := 0; x < iterations; x++ {
-		variables[pos].Value = strconv.Itoa(x)
+		// check if the iteration variable has been reset, if so break continue loop from that point
+		// not entirely sure why this works
+		lastValue, _ = strconv.Atoi(variables[pos].Value)
+		if lastValue+1 != x {
+			x = lastValue
+		} else {
+			variables[pos].Value = strconv.Itoa(x)
+		}
 		Lex(lines)
 	}
 }

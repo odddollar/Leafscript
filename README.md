@@ -7,9 +7,9 @@ It supports:
 - String concatenation
 - For loops
 - If/else statements
+- Breaks in for loops
 
 Currently working on:
-- Breaks in for loops
 - Nested if/for
 
 Language examples are contained within the "Examples" file
