@@ -5,11 +5,17 @@ import (
 )
 
 func main() {
-	//file := flag.String("file_path", "", "Directory of file to run")
-	//flag.Parse()
-
 	fileLines := supporting.ParseFile("test.lfs")
-	//fileLines := supporting.ParseFile(*file)
-
 	supporting.Lex(fileLines)
+
+	/*file := flag.String("file_path", "", "Directory of file to run")
+	flag.Parse()
+
+	if strings.Contains(*file, ".lfs") {
+		fileLines := supporting.ParseFile(*file)
+
+		supporting.Lex(fileLines)
+	} else {
+		fmt.Println("Invalid file format. Please use the format .lfs")
+	}*/
 }
