@@ -12,4 +12,8 @@ It supports:
 Currently working on:
 - Nested if/for
 
+No plans to implement in near future
+- Error messages
+- Array variables
+
 Language examples are contained within the "Examples" file
