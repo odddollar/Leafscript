@@ -1,1 +1,1 @@
-go get github.com/Knetic/govaluate
+github.com/Knetic/govaluate
