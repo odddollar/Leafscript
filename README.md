@@ -11,3 +11,5 @@ It supports:
 Currently working on:
 - Breaks in for loops
 - Nested if/for
+
+Language examples are contained within the "Examples" file
