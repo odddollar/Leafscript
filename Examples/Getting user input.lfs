@@ -1,4 +1,8 @@
-// use the keyword input followed by a statement to print
+// use the keyword "input" followed by a statement to print
 var name = input "What is your name? "
 
+// use the keyword "inputint" to get the input as an integer/float
+var number = inputint "Enter a number: "
+
 print string name
+print math number
