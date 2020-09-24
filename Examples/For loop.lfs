@@ -1,4 +1,4 @@
-// for loops must contain an iteration variable and a number of iteration, running from 0 to number of iterations - 1
+// for loops must contain an iteration variable and a number of iterations, running from 0 to number of iterations - 1
 for x 20
 	print math x
 endfor
