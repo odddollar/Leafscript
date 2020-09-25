@@ -1,0 +1,18 @@
+var number = inputint "Enter a number to find primes up to: "
+var total = 0
+
+for x math number
+	var y = 0
+	for i math x
+		if math x%i == 0
+			var y = math y+1
+		endif
+	endfor
+
+	if math y < 2
+		print concat math x & " is prime"
+		var total = math total+1
+	endif
+endfor
+
+print concat math total & " primes found"
