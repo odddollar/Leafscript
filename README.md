@@ -35,11 +35,11 @@ Currently working on:
 No plans to implement in near future
 - Array variables
 
-Language examples are contained within the "Examples" file
-
 ## Examples
 
 ***Ensure tabs are used to indent and not spaces. Spaces do not work***
+
+Additional language examples are contained within the "Examples" file
 
 #### Find all the factors of a number
 ```
