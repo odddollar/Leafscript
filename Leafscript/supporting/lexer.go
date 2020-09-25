@@ -1,6 +1,7 @@
 package supporting
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -11,9 +12,11 @@ type variable struct {
 }
 
 var variables = []variable{}
+var globalDebug = false
 
-func Lex(lines [][]string) {
+func Lex(lines [][]string, debug bool) {
 	//fmt.Println(lines)
+	globalDebug = debug
 
 	// iterate through lines on file
 	for x := 0; x < len(lines); x++ {
@@ -46,6 +49,9 @@ func Lex(lines [][]string) {
 			// parse lines to for loop lexer
 			forLoop(forLines, lines[y][1], strings.Join(lines[y][2:], " "))
 		} else if strings.TrimSpace(lines[x][0]) == "if" {
+			// count number of tabs
+			tabs := strings.Count(lines[x][0], "\t")
+
 			ifLines := [][]string{}
 			elseLines := [][]string{}
 			isElse := false
@@ -54,11 +60,11 @@ func Lex(lines [][]string) {
 			y := x
 			for i < len(lines) {
 				// break out of loop
-				if strings.TrimSpace(lines[i][0]) == "endif" || strings.TrimSpace(lines[i][0]) == "else"{
+				if (strings.TrimSpace(lines[i][0]) == "endif" || strings.TrimSpace(lines[i][0]) == "else") && strings.Count(lines[i][0], "\t") == tabs {
 					// check if statement is present
-					if strings.TrimSpace(lines[i][0]) == "else" {
+					if strings.TrimSpace(lines[i][0]) == "else" && strings.Count(lines[i][0], "\t") == tabs {
 						isElse = true
-						elseLines = getElseLines(i, lines)
+						elseLines = getElseLines(i, lines, tabs)
 						x = i
 					}
 					x = i
@@ -77,25 +83,28 @@ func Lex(lines [][]string) {
 			} else {
 				ifStatement(ifLines, elseLines, strings.Join(lines[y][1:], " "))
 				for s := x; s < len(lines); s++ {
-					if strings.TrimSpace(lines[s][0]) == "endif" {
+					if strings.TrimSpace(lines[s][0]) == "endif" && strings.Count(lines[s][0], "\t") == tabs {
 						x = s
 						break
 					}
 				}
 			}
 		}
-	}
 
-	//fmt.Println(variables)
+		// print variable list if debug mode is true
+		if debug {
+			fmt.Println(variables)
+		}
+	}
 }
 
-func getElseLines(currentLine int, lines [][]string) [][]string {
+func getElseLines(currentLine int, lines [][]string, tabs int) [][]string {
 	currentLine += 1
 	returnLines := [][]string{}
 
 	// check if reached the end of if statement
 	for currentLine < len(lines) {
-		if strings.TrimSpace(lines[currentLine][0]) == "endif" {
+		if strings.TrimSpace(lines[currentLine][0]) == "endif" && strings.Count(lines[currentLine][0], "\t") == tabs{
 			break
 		}
 

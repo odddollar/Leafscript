@@ -40,7 +40,7 @@ func forLoop(lines [][]string, iterVar string, iter string) {
 		} else {
 			variables[pos].Value = strconv.Itoa(x)
 		}
-		Lex(lines)
+		Lex(lines, globalDebug)
 	}
 }
 

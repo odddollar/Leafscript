@@ -36,9 +36,9 @@ func ifStatement(lines [][]string, falseLines [][]string, conditional string) {
 	// main lexer to be run if expression is true
 	if result == true {
 		// parse lines into main lexer
-		Lex(lines)
+		Lex(lines, globalDebug)
 	} else {
-		Lex(falseLines)
+		Lex(falseLines, globalDebug)
 	}
 }
 
