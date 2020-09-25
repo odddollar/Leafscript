@@ -21,6 +21,8 @@ func forLoop(lines [][]string, iterVar string, iter string) {
 			Name:  iterVar,
 			Type:  "num",
 		})
+	} else {
+		variables[getVariablePosition(iterVar)].Value = "0"
 	}
 
 	// get position of iteration variable in variable array

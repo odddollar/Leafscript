@@ -24,8 +24,10 @@ func ParseFile(directory string) [][]string {
 		line := scanner.Text()
 		// check if line commented out
 		if !strings.Contains(line, "//") {
-			line = strings.TrimSpace(line)
+			//line = strings.TrimSpace(line)
+			line = strings.TrimRight(line, "\t \n")
 			lineSplit := strings.Split(line, " ")
+
 			lines = append(lines, lineSplit)
 		}
 	}
