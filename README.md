@@ -37,4 +37,30 @@ No plans to implement in near future
 
 Language examples are contained within the "Examples" file
 
+## Examples
+
 ***Ensure tabs are used to indent and not spaces. Spaces do not work***
+
+#### Find all the factors of a number
+```
+var number = inputint "Enter a number to find factors of: "
+
+for x math number+1
+	if math number%x == 0
+		print concat math x & " is a factor of " & math number
+	endif
+endfor
+```
+
+#### Print all binary numbers from 0 to 15
+```
+for x 2
+	for y 2
+		for z 2
+			for i 2
+				print concat math x & " " & math y & " " & math z & " " & math i
+			endfor
+		endfor
+	endfor
+endfor
+```
