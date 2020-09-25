@@ -1,7 +1,7 @@
 var number = inputint "Enter a number to find factors of: "
 
 for x math number+1
-    if math number%x == 0
-        print concat math x & " is a factor of " & math number
-    endif
+	if math number%x == 0
+		print concat math x & " is a factor of " & math number
+	endif
 endfor
