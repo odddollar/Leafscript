@@ -1,10 +1,11 @@
 package main
 
 import (
-	"./supporting"
 	"flag"
 	"fmt"
 	"strings"
+
+	"github.com/odddollar/Leafscript/supporting"
 )
 
 func main() {
