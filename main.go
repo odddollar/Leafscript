@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./supporting"
+	"github.com/odddollar/Leafscript/supporting"
 	"flag"
 	"fmt"
 	"strings"
