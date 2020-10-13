@@ -7,15 +7,19 @@ It's written entirely in Golang, and was inspired by the speed and simplicity of
 ## Usage
 Programs can be run from the command line using the Leafscript binary file.
 
-```[NAME OF BINARY FILE] -run [PATH TO .lfs FILE] -debug [SET TO FALSE BY DEFAULT]```
+```[NAME OF LEAFSCRIPT BINARY FILE] --run [PATH TO .lfs FILE] --debug [SET TO FALSE BY DEFAULT]```
 
 E.g. 
 
-```leafscript -run program.lfs```
+```leafscript --run program.lfs```
+
+Programs can be packaged to exe files. This will create a binary file from the Leafscript source code.
+
+```[NAME OF LEAFSCRIPT BINARY FILE] --build [PATH TO .lfs FILE]```
 
 Includes a basic debugger that prints a list of all variables every line. E.g. 
 
-```leafscript -run program.lfs -debug true```
+```leafscript --run program.lfs --debug true```
 
 
 ## Features
@@ -28,12 +32,11 @@ It supports:
 - Breaks in for loops
 - Nested if/for
 - Basic debugging mode that prints all variables every line
-
-Currently working on:
-- Error messages
+- Packaging programs to an exe file
 
 No plans to implement in near future
 - Array variables
+- Error messages
 
 ## Examples
 
@@ -86,3 +89,12 @@ endfor
 
 print concat math total & " primes found"
 ```
+
+## Changelog
+
+#### v1.0
+- Initial release
+
+#### v1.1
+- Modified command line interface to use more robust argparse library
+- Added ability to package .lfs files to .exe using PackageFile.exe
