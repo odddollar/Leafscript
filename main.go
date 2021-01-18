@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/odddollar/Leafscript/supporting"
+	"Leafscript/supporting"
 	"archive/zip"
 	"fmt"
 	"github.com/akamensky/argparse"

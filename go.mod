@@ -1,4 +1,4 @@
-module github.com/odddollar/Leafscript
+module Leafscript
 
 go 1.15
 
