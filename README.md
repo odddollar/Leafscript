@@ -98,3 +98,7 @@ print concat math total & " primes found"
 #### v1.1
 - Modified command line interface to use more robust argparse library
 - Added ability to package .lfs files to .exe using PackageFile.exe
+
+#### v1.1.1
+
+- Fixed imports
