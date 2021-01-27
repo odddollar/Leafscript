@@ -1,8 +1,6 @@
 # Leafscript
 Leafscript is a lightweight programming language created as a proof of concept by someone with no idea how to write a language.
-It's written entirely in Golang, and was inspired by the speed and simplicity of Lua. It can be compiled from source to a binary .exe file using the command:
-
-```go build main.go```
+It's written entirely in Golang, and was inspired by the speed and simplicity of Lua. It can be compiled from source to a binary .exe file using the command: ```go build Leafscipt```
 
 ## Usage
 Programs can be run from the command line using the Leafscript binary file.
