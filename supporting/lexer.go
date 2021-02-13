@@ -6,8 +6,8 @@ import (
 )
 
 type variable struct {
-	Name string
-	Type string
+	Name  string
+	Type  string
 	Value string
 }
 
@@ -21,7 +21,7 @@ func Lex(lines [][]string, debug bool) {
 	// iterate through lines on file
 	for x := 0; x < len(lines); x++ {
 		// run function based on keyword
-		if strings.TrimSpace(lines[x][0]) == "var" && lines[x][2] == "="{
+		if strings.TrimSpace(lines[x][0]) == "var" && lines[x][2] == "=" {
 			createVar(lines[x])
 		} else if strings.TrimSpace(lines[x][0]) == "print" {
 			customPrint(lines[x])
@@ -31,9 +31,9 @@ func Lex(lines [][]string, debug bool) {
 
 			forLines := [][]string{}
 			// parse lines into for loop then skip lines in main lexer
-			i := x+1
+			i := x + 1
 			y := x
-			for i < len(lines){
+			for i < len(lines) {
 				// break out of loop
 				if strings.TrimSpace(lines[i][0]) == "endfor" && strings.Count(lines[i][0], "\t") == tabs {
 					x = i
@@ -56,7 +56,7 @@ func Lex(lines [][]string, debug bool) {
 			elseLines := [][]string{}
 			isElse := false
 			// parse lines into if statement then skip lines in main lexer
-			i := x+1
+			i := x + 1
 			y := x
 			for i < len(lines) {
 				// break out of loop
@@ -104,7 +104,7 @@ func getElseLines(currentLine int, lines [][]string, tabs int) [][]string {
 
 	// check if reached the end of if statement
 	for currentLine < len(lines) {
-		if strings.TrimSpace(lines[currentLine][0]) == "endif" && strings.Count(lines[currentLine][0], "\t") == tabs{
+		if strings.TrimSpace(lines[currentLine][0]) == "endif" && strings.Count(lines[currentLine][0], "\t") == tabs {
 			break
 		}
 

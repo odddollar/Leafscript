@@ -18,8 +18,8 @@ func forLoop(lines [][]string, iterVar string, iter string) {
 	// create iteration variable
 	if !checkIfVariableExists(iterVar) {
 		variables = append(variables, variable{
-			Name:  iterVar,
-			Type:  "num",
+			Name: iterVar,
+			Type: "num",
 		})
 	} else {
 		variables[getVariablePosition(iterVar)].Value = "0"

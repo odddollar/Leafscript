@@ -8,8 +8,8 @@ func createVar(variableArray []string) {
 	// check if exists
 	if !checkIfVariableExists(variableArray[1]) {
 		variables = append(variables, variable{
-			Name:  variableArray[1],
-			Type:  checkIfVariableIsString(variableArray[3]),
+			Name: variableArray[1],
+			Type: checkIfVariableIsString(variableArray[3]),
 		})
 	}
 
@@ -41,7 +41,7 @@ func createVar(variableArray []string) {
 				result := input(strings.ReplaceAll(strings.Join(variableArray[4:], " "), "\"", ""))
 				variables[x].Value = result
 				break
-			} else if variableArray[3] == "string"{
+			} else if variableArray[3] == "string" {
 				// check if another string is being assigned
 				result := doString(variableArray[4])
 				variables[x].Value = result

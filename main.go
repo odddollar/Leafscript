@@ -25,7 +25,7 @@ func main() {
 	}
 
 	// check if compiling or running
-	if *run != "" && *compile == ""{
+	if *run != "" && *compile == "" {
 		// ensure correct file format is used
 		if strings.Contains(*run, ".lfs") {
 			// parse file to language
@@ -39,7 +39,7 @@ func main() {
 		} else {
 			fmt.Println("Invalid file format. Please use the format .lfs")
 		}
-	} else if *run == "" && *compile != ""{
+	} else if *run == "" && *compile != "" {
 		// ensure correct file format is used
 		if strings.Contains(*compile, ".lfs") {
 			// create zip file to copy to and zip writer
