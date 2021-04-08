@@ -5,7 +5,7 @@ It's written entirely in Golang, and was inspired by the speed and simplicity of
 ## Usage
 Programs can be run from the command line using the Leafscript binary file.
 
-```[NAME OF LEAFSCRIPT BINARY FILE] --run [PATH TO .lfs FILE] --debug [SET TO FALSE BY DEFAULT]```
+```leafscript --run [PATH TO .lfs FILE] --debug [SET TO FALSE BY DEFAULT]```
 
 E.g. 
 
@@ -13,7 +13,7 @@ E.g.
 
 Programs can be packaged to exe files. This will create a binary file from the Leafscript source code.
 
-```[NAME OF LEAFSCRIPT BINARY FILE] --build [PATH TO .lfs FILE]```
+```leafscript --build [PATH TO .lfs FILE]```
 
 Includes a basic debugger that prints a list of all variables every line. E.g. 
 
@@ -91,9 +91,11 @@ print concat math total & " primes found"
 ## Changelog
 
 #### v1.0
+
 - Initial release
 
 #### v1.1
+
 - Modified command line interface to use more robust argparse library
 - Added ability to package .lfs files to .exe using PackageFile.exe
 
