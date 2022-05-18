@@ -11,7 +11,7 @@ import (
 
 func main() {
 	// create argparse
-	parser := argparse.NewParser("Leafscript", "The backend of the Leafscript programming language")
+	parser := argparse.NewParser("Leafscript", "The interpreter of the Leafscript programming language")
 	run := parser.String("r", "run", &argparse.Options{Help: "The path to the .lfs file to run"})
 	debug := parser.Flag("d", "debug", &argparse.Options{Default: false, Help: "Include to run program in debug mode"})
 	err := parser.Parse(os.Args)
@@ -31,5 +31,6 @@ func main() {
 		}
 	} else {
 		fmt.Println("Invalid file format. Please use the format .lfs")
+		fmt.Println("To view usage information, include the -h flag")
 	}
 }
