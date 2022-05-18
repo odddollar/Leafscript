@@ -26,7 +26,6 @@ It supports:
 - Breaks in for loops
 - Nested if/for
 - Basic debugging mode that prints all variables every line
-- Packaging programs to an exe file
 
 No plans to implement in near future
 - Array variables
