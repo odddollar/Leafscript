@@ -11,10 +11,6 @@ E.g.
 
 ```leafscript --run program.lfs```
 
-Programs can be packaged to exe files. This will create a binary file from the Leafscript source code.
-
-```leafscript --build [PATH TO .lfs FILE]```
-
 Includes a basic debugger that prints a list of all variables every line. E.g. 
 
 ```leafscript --run program.lfs --debug true```
@@ -102,3 +98,7 @@ print concat math total & " primes found"
 #### v1.1.1
 
 - Fixed imports
+
+#### v1.2
+
+- Removed poor implementation of packaging files to binary
